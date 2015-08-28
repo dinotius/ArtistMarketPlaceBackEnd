@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lembit.ArtistMarketPlace.RepositoryInterfaces;
-using Lembit.ArtistMarketPlace.MockVenueRepository;
+﻿using Lembit.ArtistMarketPlace.RepositoryInterfaces;
 using Autofac;
+using Lembit.ArtistMarketPlace.SQLData;
+//using Lembit.ArtistMarketPlace.MockVenueRepository;
 
 namespace Lembit.ArtistMarketPlace.IoC
 {

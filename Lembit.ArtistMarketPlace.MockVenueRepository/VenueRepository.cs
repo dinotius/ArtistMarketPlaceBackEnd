@@ -25,31 +25,31 @@ namespace Lembit.ArtistMarketPlace.MockVenueRepository
                 new Venue()
                 {
                     Id = 1,
-                    Name = "The Bay View Hotel",
+                    Name = "The Bay View Mock Hotel",
                     Coordinate = new Coordinate()
                     {
                         Latitude = 198,
-                        Longditude = 233
+                        Longitude = 233
                     }
                 },
                 new Venue()
                 {
                     Id = 2,
-                    Name = "The Greate Northern",
+                    Name = "The Great Northern Mock",
                     Coordinate = new Coordinate()
                     {
                         Latitude = 877,
-                        Longditude = 459
+                        Longitude = 459
                     }
                 },
                 new Venue()
                 {
                     Id = 3,
-                    Name = "Strawberry Hotel",
+                    Name = "Strawberry Mock Hotel",
                     Coordinate = new Coordinate()
                     {
                         Latitude = 655,
-                        Longditude = 899
+                        Longitude = 899
                     }
                 }
             };

@@ -28,8 +28,6 @@ namespace Lembit.ArtistMarketPlace.API.Dependency_Resolution
             //Set the dependency resolver to be Autofac.
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
-
-
         }
     }
 }

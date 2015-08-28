@@ -29,17 +29,17 @@ namespace Lembit.ArtistMarketPlace.SQLData
                     Coordinate = new Coordinate()
                     {
                         Latitude = 198,
-                        Longditude = 233
+                        Longitude = 233
                     }
                 },
                 new Venue()
                 {
                     Id = 2,
-                    Name = "The Greate Northern",
+                    Name = "The Great Northern",
                     Coordinate = new Coordinate()
                     {
                         Latitude = 877,
-                        Longditude = 459
+                        Longitude = 459
                     }
                 },
                 new Venue()
@@ -49,7 +49,7 @@ namespace Lembit.ArtistMarketPlace.SQLData
                     Coordinate = new Coordinate()
                     {
                         Latitude = 655,
-                        Longditude = 899
+                        Longitude = 899
                     }
                 }
             };

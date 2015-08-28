@@ -9,6 +9,6 @@ namespace Lembit.ArtistMarketPlace.DomainModels
     public class Coordinate
     {
         public int Latitude { get; set; }
-        public int Longditude { get; set; }
+        public int Longitude { get; set; }
     }
 }

@@ -21,12 +21,14 @@ namespace Lembit.ArtistMarketPlace.API.Controllers
 
         }
 
+        
         public VenuesController(IVenueRepository venueRepository)
         {
             _venueRepository = venueRepository;
         }
 
         // GET api/venues
+        [Authorize]
         public IEnumerable<Venue> Get()
         {
             return _venueRepository.GetAllVenues();
