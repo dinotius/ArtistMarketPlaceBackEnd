@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+
+    <link href="content/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="content/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="content/js/angular.js"></script>
+    <script src="content/js/bootstrap.js"></script>
+
+    <script src="content/js/app/app.js"></script>
+    <script src="content/js/app/artistCtrl.js"></script>
+
+</head>
+<body ng-app="artistApp">
+
+<div ng-controller="artistController">
+
+    <input type="text" name="txtInput" ng-model="greeting" />
+    {{greeting}}
+
+    <div class="col-lg-offset-4">one</div>
+    <div class="col-lg-offset-4">
+        <div class="col-lg-2">two</div>
+        <div class="col-lg-2">two</div>
+    </div>
+    <div class="col-lg-offset-4">one</div>
+    <div class="col-lg-offset-4">one</div>
+
+</div>
+
+</body>
+</html>

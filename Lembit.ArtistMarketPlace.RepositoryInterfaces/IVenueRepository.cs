@@ -10,6 +10,6 @@ namespace Lembit.ArtistMarketPlace.RepositoryInterfaces
 {
     public interface IVenueRepository
     {
-        List<Venue> GetAllVenues();
+        IQueryable<Venue> GetAllVenues();
     }
 }

@@ -48,6 +48,10 @@
       <Project>{2ee17b3a-2b03-4528-ae22-424e66100416}</Project>
       <Name>Lembit.ArtistMarketPlace.DomainModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lembit.ArtistMarketPlace.InfrastructureInterfaces\Lembit.ArtistMarketPlace.InfrastructureInterfaces.csproj">
+      <Project>{46985DFA-8246-4569-847A-7BED31B30FAA}</Project>
+      <Name>Lembit.ArtistMarketPlace.InfrastructureInterfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lembit.ArtistMarketPlace.RepositoryInterfaces\Lembit.ArtistMarketPlace.RepositoryInterfaces.csproj">
       <Project>{861F69FB-4B67-4605-BD32-557E3AC6679F}</Project>
       <Name>Lembit.ArtistMarketPlace.RepositoryInterfaces</Name>

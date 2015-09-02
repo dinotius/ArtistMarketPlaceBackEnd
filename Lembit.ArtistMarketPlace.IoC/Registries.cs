@@ -2,6 +2,8 @@
 using Autofac;
 using Lembit.ArtistMarketPlace.SQLData;
 //using Lembit.ArtistMarketPlace.MockVenueRepository;
+using Lembit.ArtistMarketPlace.InfrastructureInterfaces;
+using Lembit.ArtistMarketPlance.Infrastructure;
 
 namespace Lembit.ArtistMarketPlace.IoC
 {
@@ -14,7 +16,12 @@ namespace Lembit.ArtistMarketPlace.IoC
     {
         protected override void Load(ContainerBuilder builder)
         {
+            //Domain
             builder.RegisterType<VenueRepository>().As<IVenueRepository>().SingleInstance();
+            //builder.RegisterType<VenueRepository>().As<IVenueRepository>().InstancePerDependency();
+
+            //Infrastructure
+            builder.RegisterType<ConsoleLogger>().As<ILogger>().SingleInstance();
         }
     }
 }

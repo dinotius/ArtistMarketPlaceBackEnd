@@ -5,8 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Permissions;
 using System.Web.Http;
-
-using Lembit.ArtistMarketPlace.DomainModels;
+using Lembit.ArtistMarketPlace.API.ViewModels;
 using Lembit.ArtistMarketPlace.MockVenueRepository;
 using Lembit.ArtistMarketPlace.RepositoryInterfaces;
 
@@ -14,24 +13,31 @@ namespace Lembit.ArtistMarketPlace.API.Controllers
 {
     public class VenuesController : ApiController
     {
-        private readonly IVenueRepository _venueRepository;
+        //private readonly IVenueRepository _venueRepository;
+        private readonly IVenueVmMapper _venueVmMapper;
 
         public VenuesController()
         {
+            
+        }
 
+        public VenuesController(IVenueVmMapper venueVmMapper)
+        {
+            _venueVmMapper = venueVmMapper;
         }
 
         
-        public VenuesController(IVenueRepository venueRepository)
-        {
-            _venueRepository = venueRepository;
-        }
+        //public VenuesController(IVenueRepository venueRepository)
+        //{
+        //    _venueRepository = venueRepository;
+        //}
 
         // GET api/venues
-        [Authorize]
-        public IEnumerable<Venue> Get()
+        //[Authorize]
+        public IEnumerable<VenueVm> Get()
         {
-            return _venueRepository.GetAllVenues();
+            //return _venueRepository.GetAllVenues();
+            return _venueVmMapper.GetList();
         }
 
         // GET api/venues/5

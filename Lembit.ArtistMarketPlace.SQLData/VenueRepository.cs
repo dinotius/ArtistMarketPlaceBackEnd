@@ -4,23 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Lembit.ArtistMarketPlace.DomainModels;
+using Lembit.ArtistMarketPlace.InfrastructureInterfaces;
 using Lembit.ArtistMarketPlace.RepositoryInterfaces;
 
 namespace Lembit.ArtistMarketPlace.SQLData
 {
     public class VenueRepository : IVenueRepository
     {
-        private static List<Venue> _venues;
+        private IQueryable<Venue> _venues;
+        private readonly ILogger _logger;
 
-        static VenueRepository()
+        public VenueRepository(ILogger logger)
         {
-            if (_venues == null)
-                CreateMockVenueRepository();
+            _logger = logger;
+
+            CreateMockVenueRepository();
         }
 
-        private static void CreateMockVenueRepository()
+        private void CreateMockVenueRepository()
         {
-            _venues = new List<Venue>
+            List<Venue> tmp = new List<Venue>
             {
                 new Venue()
                 {
@@ -54,11 +57,12 @@ namespace Lembit.ArtistMarketPlace.SQLData
                 }
             };
 
-
+            _venues = tmp.AsQueryable();
         }
 
-        public List<Venue> GetAllVenues()
+        public IQueryable<Venue> GetAllVenues()
         {
+            _logger.Info("Loaded all venues...............................");
             return _venues;
         }
     }

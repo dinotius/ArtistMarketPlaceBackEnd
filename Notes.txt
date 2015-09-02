@@ -1,0 +1,3 @@
+A repository is an object for storing / retrieving a single entity type
+When you want to work on multiple objects types, put that in the business later (you can have multiple business layers)
+Onion archtecture without the tears, view model mapper 1:41:30

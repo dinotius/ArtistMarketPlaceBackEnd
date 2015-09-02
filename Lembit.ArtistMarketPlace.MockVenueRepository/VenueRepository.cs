@@ -10,7 +10,7 @@ namespace Lembit.ArtistMarketPlace.MockVenueRepository
 {
     public class VenueRepository : IVenueRepository
     {
-        private static List<Venue> _venues;
+        private static IQueryable<Venue> _venues;
 
         static VenueRepository()
         {
@@ -20,7 +20,7 @@ namespace Lembit.ArtistMarketPlace.MockVenueRepository
 
         private static void CreateMockVenueRepository()
         {
-            _venues = new List<Venue>
+            List<Venue> tmp = new List<Venue>
             {
                 new Venue()
                 {
@@ -54,10 +54,10 @@ namespace Lembit.ArtistMarketPlace.MockVenueRepository
                 }
             };
 
-
+            _venues = tmp.AsQueryable();
         }
 
-        public List<Venue> GetAllVenues()
+        public IQueryable<Venue> GetAllVenues()
         {
             return _venues;
         }
