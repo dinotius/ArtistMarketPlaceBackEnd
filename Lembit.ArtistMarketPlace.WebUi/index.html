@@ -12,24 +12,50 @@
 
     <script src="content/js/app/app.js"></script>
     <script src="content/js/app/artistCtrl.js"></script>
+    <script src="content/js/app/venueService.js"></script>
+
+    <!--<style>
+        .test {
+            background-color: red;
+            position: relative;
+            top: 100px;
+        }
+    </style>-->
 
 </head>
 <body ng-app="artistApp">
 
 <div ng-controller="artistController">
 
-    <input type="text" name="txtInput" ng-model="greeting" />
-    {{greeting}}
+    <div class="container">
+        <div class="col-sm-6">
+            <div class="well">
+                <input type="text" name="txtInput" ng-model="greeting"/>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="well">
+                {{greeting}}
+            </div>
+        </div>
 
-    <div class="col-lg-offset-4">one</div>
-    <div class="col-lg-offset-4">
-        <div class="col-lg-2">two</div>
-        <div class="col-lg-2">two</div>
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="well">
+                    <button ng-click="callNotify()">Click Me</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-offset-4">one</div>
-    <div class="col-lg-offset-4">one</div>
+
+    <div class="container">
+        
+    </div>
 
 </div>
+
+
+
 
 </body>
 </html>
